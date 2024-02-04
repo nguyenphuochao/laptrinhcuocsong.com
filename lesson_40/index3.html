@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    span#red{
+        background-color: red;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    span#yellow{
+        background-color: yellow;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    span#green{
+        background-color: green;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    span{
+        margin-left: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div>
+        <span id="red"></span>
+        <span id="yellow"></span>
+        <span id="green"></span>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('span#red').click(function(){
+          $('body').css('background','red')
+        })
+        $('span#yellow').click(function(){
+            $('body').css('background','yellow')
+        })
+        $('span#green').click(function(){
+            $('body').css('background','green')
+        });
+        $('span').click(function(){
+            $(this).css('border','solid 1px black')
+        })
+    });
+</script>
+</html>

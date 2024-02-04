@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wraper {
+            max-width: 300px;
+        }
+
+        .header {
+            display: flex;
+            background-color: #448AC8;
+            padding: 8px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+
+        }
+
+        .header>div {
+            margin-right: 10px;
+        }
+
+        .content {
+            display: flex;
+            border: 1px solid #448AC8;
+            padding: 8px;
+        }
+
+        .content>div {
+            margin-right: 10px;
+            display: none;
+        }
+
+        .content>div.show {
+            display: block;
+        }
+
+        .header>div.active {
+            background-color: white;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper" id="tab_sv">
+        <div class="header">
+            <div class="item-header">Content-1</div>
+            <div class="item-header">Content-2</div>
+            <div class="item-header">Content-3</div>
+
+        </div>
+        <div class="content">
+            <div class="show">Content-1</div>
+            <div>Content-2</div>
+            <div>Content-3</div>
+        </div>
+    </div>
+</body>
+<script>
+    var headers=document.getElementsByClassName('item-header');
+    console.log(headers)
+    headers.forEach((element,index) => {
+        alert(element)
+    });
+    // header.forEach(element => {
+    //     console.log(element)
+    // });
+</script>
+
+</html>

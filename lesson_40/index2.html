@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        ul>li>a{
+            background-color: red;
+        }
+        ul>li>ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">Layout</a>
+            <ul>
+                <li><a href="#">Static Navigation</a></li>
+                <li><a href="#">Light Slidenav</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Page</a>
+            <ul>
+                <li><a href="#">Authentication</a></li>
+                <li>
+                    <a href="#">Error</a>
+                    <ul>
+                        <li><a href="#">Error 404</a></li>
+                        <li><a href="#">Error 405</a></li>
+                        <li><a href="#">Error 401</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('ul>li>a').click(function(){
+           //$('ul>li>ul').slideUp();
+           $(this).next().slideToggle();
+        });
+        $('ul>li>ul>li>a').click(function(){
+            
+            //alert('clicked');
+            $(this).next().slideDown();
+        });
+    });
+</script>
+</html>

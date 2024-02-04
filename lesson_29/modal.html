@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wraper.open {
+            display: none;
+        }
+
+        .wraper {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #F7F7F7;
+            padding: 15px;
+            box-shadow: 3px 3px #F7F7F7;
+            position: relative;
+        }
+
+        .wraper>div {
+            text-align: end;
+            margin-right: 50px;
+        }
+
+        button {
+            padding: 8px 15px;
+        }
+
+        button:nth-child(2) {
+            background-color: #1cb9dd;
+            color: white;
+        }
+
+        .wraper>div#close {
+            color: rgb(19, 18, 18);
+            position: absolute;
+            top: 6px;
+            right: -39px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper" id="trash">
+        <h3>Trash post?</h3>
+        <p>This will move the post to the trash</p>
+        <div>
+            <button>Cancel</button>
+            <button>Trash</button>
+        </div>
+        <div id="close">X</div>
+    </div>
+</body>
+<script src="modal.js"></script>
+
+</html>

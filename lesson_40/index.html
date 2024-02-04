@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+</head>
+<style>
+    .container {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .container>ul>li>a {
+        background-color: red;
+
+    }
+
+    .container>ul>li>ul {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Frontend</a>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JS</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Backend</a>
+                <ul>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">C#</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.container>ul>li>a').click(function(){
+            //alert('oke');
+            $('.container>ul>li>ul').slideUp();
+            $(this).next().slideDown();
+        });
+        
+    });
+</script>
+
+</html>

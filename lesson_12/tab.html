@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab{
+            width: 400px;
+        }
+        .tab>.tab-header{
+           background-color: rgb(14, 104, 184);
+           padding: 10px;
+   
+        }
+        .tab>.tab-header>label{
+            padding: 5px;
+            display: inline-block;
+        }
+        .tab>.tab-header>label:hover{
+          
+            background-color: white;
+        }
+        .tab>.tab-content>div{
+            display: none;
+        }
+        .tab input[type=radio]{
+            display: none;
+        }
+        .tab>.tab-content input:checked + div{
+            display: block;
+        }
+        .tab>.tab-content{
+            border: 1px solid rgb(21, 174, 235);
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-header">
+            <label for="tab1">Tab 1</label>
+            <label for="tab2">Tab 2</label>
+            <label for="tab3">Tab 3</label>
+        </div>
+        <div class="tab-content">
+            <input type="radio" id="tab1" name="tabs">
+            <div id="tab1">Nội dung 1</div>
+            <input type="radio" id="tab2" name="tabs">
+            <div id="tab2">Nội dung 2</div>
+            <input type="radio" id="tab3" name="tabs">
+            <div id="tab3">Nội dung 3</div>
+        </div>
+    </div>
+</body>
+</html>

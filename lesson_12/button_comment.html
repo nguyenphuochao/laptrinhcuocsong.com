@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: white;
+            padding: 0;
+            border: 0;
+            cursor: pointer;
+
+        }
+
+        button:active {
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+
+        button span:first-child {
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 10px;
+            width: 113px;
+            display: inline-block;
+            position: relative;
+            text-align: left;
+        }
+
+        button span:last-child {
+            background-color: rgb(90, 208, 171);
+            padding: 10px;
+            border-radius: 0 10px 10px 0;
+            display: inline-block;
+            position: absolute;
+            left: 108px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        <span>Comment</span>
+        <span><i class="fa-sharp fa-solid fa-comment"></i></span>
+    </button>
+</body>
+
+</html>

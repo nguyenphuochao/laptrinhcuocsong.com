@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: #FF7926;
+            padding: 15px;
+            width: 150px;
+            border-radius: 20px;
+            position: relative;
+            text-align: left;
+            font-weight: bold;
+            border: 0;
+            cursor: pointer;
+            
+        }
+        button:active{
+            border: 1px solid grey;
+        }
+        button span:first-child {
+            color: white;
+
+        }
+
+        button span:last-child {
+            position: absolute;
+            border-radius: 50%;
+            width: 44px;
+            background-color: #FF9A5E;
+            height: 44px;
+            top: 1px;
+            right: 1px;
+        }
+
+        button span i {
+            top: 15px;
+            position: absolute;
+            right: 18px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        <span>HOVER ME</span>
+        <span><i class="fa-solid fa-arrow-right"></i></span>
+    </button>
+</body>
+
+</html>

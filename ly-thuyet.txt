@@ -1,0 +1,1152 @@
+#lesson 1
+    Giới thiệu tổng quan về khóa học
+#lesson 2
+    Làm quen với ngôn ngữ HTML
+#lession 3
+    + selector:cách để css chọn ra 1 hoặc nhiều element
+        + chọn theo thẻ:
+        + chọn theo id:
+            + id là thuộc tính của bất kì một thẻ nào
+            + đầu #
+            + id: chỉ có một
+        + chọn theo class (lớp):
+            + cũng giống id
+            + class: nhiều
+            + dấu chấm (.)
+        + chọn thành phần nằm trong : dùng dấu cách 
+        + chọn thành phần con trực tiếp: >
+        + chọn theo nhiều điều kiện: viết các điều kiện liền nhau
+        + chọn nhiều element dạng liệt kê: dấu phẩy (,)  
+        + chọn thành phần theo thứ tự:
+            + first-child: thành phần đầu tiên
+            + last-child: thành phần cuối cùng
+            + nth-child(?): chọn thành phần số mấy
+            + số chẵn: even => nth-child(even)
+            + số lẻ: odd => nth-child(odd)
+            + sử dụng tham số n (number tăng dần từ 0 -> vô cùng) vd: 2n+1->lẻ và 2n->chẵn
+
+        + chọn theo thuộc tính: dấu [thuoctinh=giatri]
+            input[tyle=text]
+        + chọn 1 thành phần tiếp theo: dùng dấu + selector
+        + chọn nhiều thành phần tiếp theo: dùng dấu ~ selector
+        + wildcat selector: * :tát cả
+        + not(selector)=>không phải
+#lesson 4
+ 5 thuộc tính quan trọng nhất của css 
+ + là những thuộc tính làm ảnh hưởng đến kích thước của element
+ + width: chiều rộng element
+     + giá tri px
+     + giá trị % của element cha
+        +position: fixed=> % của body
+     + mặc định: 
+ + height: chiều cao element
+     + tự động dài ra theo nội dung bên trong 
+     + giá trị: px, %
+ + padding: padding của element
+     + khoảng cách giữa đường viền đến nội dung 
+     + giá trị: px,%
+     + padding-left
+     + padding-right 
+     + padding-top 
+     + padding-bottom 
+    Chỉ viết padding:
+     + 1 giá trị: trên dưới trái phải = nhau
+     + 2 giá trị: trên dưới - trái phải
+     + 4 giá trị: trên phải dưới trái
+ + border: đường viền
+     + cách viết tắt:
+        border:[độ dày] [kiểu] [màu]
+        kiểu: + solid:nét liền
+              + dotted: nét chấm chấm
+              + dashed: nét gạch
+        + border-left: [độ dày][kiểu][đường viền]
+        + border-right: [độ dày][kiểu][đường viền]
+        + border-top: [độ dày][kiểu][đường viền]
+        + border-bottom: [độ dày][kiểu][đường viền]
+     + border-width: [độ dày]
+        + border-left-width 
+        + border-right-width 
+        + border-top-width 
+        + border-bottom-width 
+     + border-style:[kiểu đường viền]
+        + border-left-style 
+        + border-right-style 
+        + border-top-style 
+        + border-bottom-style
+     + border-color: [màu đường viền]
+
+              
+ + box-sizing: qui định cách mà trình duyệt tính toán kích thước của element
+    + mặc định: 
+        content-box=>rong= border + padding + width
+        border-box=>rong = width
+ + margin: là khoảng cách các thành phần xung quanh
+
+ => margin,padding,width,height.box-sizing,border
+ + block và inline 
+    + Tất cả thẻ html chia làm 2 loại:
+       + block element
+         + là element mặc định rộng 100%
+         + nằm trên 1 hàng riêng
+         + block element dùng để chứa các block hoặc inline element khác
+         + div,h,ul,ol,li,header,gooter,slidebar
+         + có thể xác định width,height cho nó
+       + inline element
+         + là element mặc định rộng bằng nội dung
+         + nằm trên cùng 1 hàng
+         + chỉ chứa các inline element 
+         + a,span,label,input,button,select 
+         + riêng thẻ img: có trình duyệt hiểu là block,có trình duyệt là inline
+         + không thể xác định width,height cho nó
+ + thuộc tính display :
+    + block:
+    + inline:
+    + inline-block: hiển thị 1 dòng như inline,nhưng có thể đặt width và height cho nó
+Luyện tập:
+    + sắp xếp các element 
+    + thử code để hiểu block và inline 
+    + học thuộc block và inline 
+#lesson 5
+ + tất cả thành phần trên trang web đều có xu hướng chạy lên phía trên,nếu là thành phần inline: chạy sang bên trái
+ 
+  Float:
+    + là 1 thuộc tính định nghĩa cho element trôi về phía nào
+    + khi float làm thế nào để không bị xuống dòng 
+      + đặt % 
+      + sử dụng fix 1 bên 
+ Basic layout:
+    + 2 cột
+    + 3 cột
+Clear:
+    + xóa sự ảnh hưởng của float của thành phần phía trước
+    + left 
+    + right 
+    + both: cả hai 
+
++ khi 1 thành phần con mà float =>thành phần cha không thể tính toán được chiều cao
++ reset css:
+    + mỗi trình duyệt có các thuộc tính mặc định khác nhau
+Dựng layout những các web đã có
+Bài tập: dựng lại layout dựng lại trang web mà bạn thích
+#lesson 6: sửa bài tập
+#lesson 7:
+    + Flex: flex box
+    + Không chắc chắn chạy dc trên 100% trình duyệt
+    + Flex là mô hình dàn trang phổ biến trên mobile app, android,ios
+    + js,vue (react) => react native (mobile)
+    + để sử dụng flex: display:flex cho thành phần cha 
+    + flex-grow: 
+        + định nghĩa việc lớn lên của flex item
+        + là tỉ lệ phân chia phần thừa còn lại của cha 
+        + theo trục main 
+    + flex-shrink:
+        + ngược lại vs flex-grow 
+        + là tỉ lệ phân chia khi phần cha phần thiếu
+        + theo trục main 
+    + justify-content:
+        + sắp xếp các item theo trục main(ngang)
+        + flex-start 
+        + flex-end 
+        + center 
+        + space-beetween
+        + space-around 
+    + align-items:
+        + sắp xếp item theo trục cross (dọc)
+        + flex-start 
+        + flex-end 
+        + center 
+    + flex-direction: 
+        + column:dọc 
+        + row thì mặc định
+    + flex-basis: 
+        + là kích thước của item theo trục main 
+        + là width khi trục main ngang 
+        + là height khi trục main là dọc
+    + flex-wrap: 
+        + khi bị quá chiều rộng có xuống dòng hay không
+Bài tập: 
+        + Dựng lại giao diện giống bài tập 2 nhưng sử dụng flex thay vì float-clear
+#lesson 8:
+    + font:
+        + Hiểu về font chữ
+        + font chữ: là một bộ hình ảnh các chữ cái
+        + gõ chữ trên máy tính: sắp xếp các hình ảnh nằm kề nhau 
+        + widow: c:/widows/fonts 
+        + linux: user/share/fonts 
+        + Dưới file font : ttf,eof,woff2
+        + font-size: 
+        + line:dòng chữ : xếp sát nhau 
+        + line-height: độ cao của dòng chữ, các chữ cái thì dc căn vào giữa dòng theo 
+        chiều dọc
+        + tạo các menu: thẻ a: line height = height 
+        + Trick: 
+           + Khi đặt height= line height thì text sẽ căn giữa theo chiều dọc 
+        + letter-spacing: khoảng cách giữa các chữ cái 
+        + word-spacing: khoảng cách giữa các từ 
+        + word-break:
+        + font-family: định nghĩa các font 
+           + danh sách các font phân cách bằng dấu phẩy
+           + các tên font có cách bộc bằng dấu nháy 
+           + sans-serif: font mặc định 
+        + @font-face:định nghĩa ra 1 cái font 
+
+
+        + có 2 loại font:
+           + font có sẵn: font có sẵn trên máy người dùng
+              + không phải tải thêm 
+              + tốc độ nhanh 
+              + nhược điểm: chưa chắc trên máy người dùng đã có font đó 
+              + Dùng với các trang web cần tốc độ, đọc thông tin 
+           + web font :
+              + là những font sẽ nhúng trên web, khi người dùng xem web thì font sẽ tải về 
+              + ưu điểm:hiển thị tất cả các font 
+              + nhược điểm: tốn thời gian tải font 
+        + icon font: nhúng CDN
+#lesson 9:
+    + position:
+          + là thuộc tính chỉ định vị trí của element
+          + fixed: nằm chính xác tuyệt đôi với body 
+             + phải đặt vị trí top,left,right,bottom cho nó 
+             + nằm lên phía trên của các element khác 
+             + chiều rộng của element phụ thuộc vào nội dung bên trong của element đó
+          + sticky: nằm bình thường,nếu như scroll chuột lên=>không thể cuộn dc nữa
+             + nằm ở lên phía trên các element khác
+             + phải đặt top 
+          + mặc định: static 
+          + relative: 
+             + vị trí liên quan
+          + absolute 
+             + tuyệt đối so với thành phần chứa nó có position là relative 
+          + cặp relative + absolute 
+    + background: 
+          + nền
+          + backgroud-color:màu nền
+          + backgroud-image: url() ảnh nền
+          + backgroud-repeat:lặp lại 
+             + no-repeat: ko lặp 
+             + repeat: lặp 
+             + repeat-x: lặp ngang 
+             + repeat-y:lặp dọc 
+          + backgroud-position:
+             + vị trí của hình nền 
+             + left-px top-px 
+             + left/right/center top/bottom/center 
+          + backgroud-size 
+             + kích thước của ảnh nền
+             + cover: zoom ra sao cho full cả 2 chiều của element 
+             + contain: zoom ra sao cho full 1 chiều của element 
+             + auto:măc định
+             + kích thước rộng - kích thước cao 
+          + backgroud attachment
+             + fixed:khi element scroll: đứng im theo body 
+             + scroll: măc định 
+             + local: scroll theo element hiện tại 
+          + cách viết tắt 
+             + backgroud:[màu][ảnh nền][repeat][position]
+          + mutiple backgroud:
+#lesson 10
+     + State: các element trên trang web đều có state 
+         + hover:khi người dùng di chuột lên element,có ở tất cả các element 
+         + active:khi ta nhấn vào chưa thả ra
+         + visited:link bạn đã xem (thẻ a)
+         + link:trạng thái ban đầu (thẻ a)
+         + focus:element hiện tại 
+     Pseudo element:
+         + cũng là element như các thẻ khác 
+         + Do css thêm vào 
+    Có 2 cái pseudo element:
+         + before:thêm vào trước element khác, phải có thuộc tính content 
+         + after:thêm vào sau element khác, content
+    Dropdown menu:
+         + cặp thẻ relative + absolute
+    Bài tập:
+           + Thực hành làm cái Dropdown menu 
+           + flyout menu 
+           + Tooltip 
+#lession 11
+    + text-align: ảnh hưởng đến text và tất cả các inline element trong nó 
+    + text-decoration:trang trí cho text 
+    + text-indent: canh lề trái 
+    + overflow:nội dung bên trong bị tràn ra bên ngoài
+        + scroll:cuộn 
+        + hidden: bị ẩn 
+        + overflow-x:
+        + overflow-y:
+        + opacity: độ trong suốt của element, giá trị từ 0 đến 1
+        + color:màu chữ 
+            + màu trong web: 
+                + tiếng anh:red,green,yellow,...
+                + mã màu RGB: #3a3a3a
+                + màu rgba: 
+        + list-style:kiểu trong li 
+        + border-collapse:table :gộp tất cả các viền thành 1 
+        + border-radius: độ bo gốc 
+        + shawdow
+           + box-shadow: bóng đổ của box 
+           + text-shadow: bóng đổ của text
+#lession 12: thực hành làm 
+    + switch box:
+    + tab: 
+    + button arrow 
+    + media query 
+       + css selector theo thiết bị 
+       + thiết kế web reponsive 
+       + break point(điểm phá vỡ)
+
+       + màn hình rất lớn > 1200px
+       + màn hình desktop: 960px 
+       + màn hình medium mobile: 768px
+       + màn hình rất nhỏ : <500px 
+    có 2 cách viết: 
+       + tăng dần: max->mobile first  
+       @media all and (max-width:500px){
+
+       }
+        @media all and (max-width:768px){
+        
+       } 
+        @media all and (max-width:960px){
+        
+       }
+        @media all and (max-width:1200px){
+        
+       }
+       + giảm dần: min->desktop-first
+       @media all and (min-width:1200px){
+
+       }
+         @media all and (min-width:960px){
+        
+       }
+         @media all and (min-width:768px){
+        
+       }
+         @media all and (min-width:500px){
+        
+       }
+    @media [loai màn hình] and [điều kiện]
+- bài tập 
+    + làm lại swicth(ko xem video)
+    + làm lại tab (ko xem video)
+    + làm cái button 
+#lession 13
+  Hình ảnh trên trang web 
+  Các loại hình ảnh trên trang web 
+  Các loại đuôi
+     + .bmp:file bitmap
+        + ảnh là 1 loạt các pixcel xếp hàng ngang+hàng dọc 
+        + có thể thể hiện các ảnh ít màu hơn 
+        + tăng hoặc giảm số bít màu=>giảm dung lượng
+        + ít phổ biến 
+     + .jpg:ảnh nền
+        + giống bitmap=>hệ số nén cao 
+        + thích hợp ảnh phong cảnh,ảnh chụp 
+        + không hỗ trợ ảnh trong suốt 
+
+     + .png:ảnh portable
+        + hệ số nén cao nếu có các vùng màu đồng đều 
+        + hỗ trợ trong suốt 
+     + .gif:ảnh gif 
+        + giống bitmap:thể hiển ảnh ít bit màu hơn
+        + hỗ trợ trong suốt 
+        + hỗ trợ animation 
+     + .webp  
+        + chuẩn ảnh của google:ít dùng 
+     + .svg: 
+        + dạng ảnh vector 
+           + ảnh hình toán học 
+        + lưu dưới dạng toán học 
+        + icon 
+        + hỗ trợ trong suốt 
+        + không chắc 100% trình duyệt hỗ trợ 
+Ảnh của 1 hình tròn màu đỏ 
+  + bán kính
+  + tọa độ tâm hình tròn 
+  + màu hình tròn 
+Style cho img 
+  + mặc định thẻ img:là 1 thẻ inline-block 
+  + các trình duyệt hiểu các img khác nhau 
+  + xem trên ipad 
+  + nên đặt thuộc tính display 
+  + đường dẫn tuyệt đối và tương đối 
+  + absolute path,relative path 
+  + tên file:
+     + chữ cái latin=>không dấu 
+     + _ -
+     + đuôi file chữ hoa,đuôi file chữ thường =>ko đảm bảo
+     + ko dc chứa dấu cách(%20)=>url encode 
+     + trên linux hoặc macos=>chũ hoa chữ thường khác nhau 
+     + window thì chữ hoa,chữ thường giống nhau
+  + đường dẫn tương đối giữa cái này vs cái kia 
+  + đường dẫn tuyệt đối:
+     + http://laptrinhcuocsong
+  + đường dẫn base url 
+#Lesson 14
+  image + position=>sprite image 
+  Bài tập: Clone lại block tiện ích tra cứu la bàn: laban.vn
+#Lesson 15
+ - Psd to html: 
+    + file photoshop: psd 
+ + Designer: những người thiết kế=>vẽ giao diện trên photoshop (illustrator)
+ + đưa file psd cho dev front-end=>cắt giao diện=>html 
+ + Tìm hiểu về photoshop 
+    + CS6 
+    + giao diện 
+    + thanh công cụ 
+       + move tool:công cụ di chuyển 
+       + select tool: chọn 
+          + Đo nhanh
+       + crop tool:công cụ cắt 1 vùng ảnh 
+       + pen tool:
+          + công cụ vẽ 
+       + text tool: chữ 
+          + line-height 
+       + hand tool: 
+          + giữ phím cách
+       + zoom tool 
+          + ctrl + (+) (-)
+       + color pallete
+          + force color 
+          + backgroud
+       + bảng layers: 
+          + Layer:lớp 
+             + là những tấm kính chồng lên nhau 
+          + group:thư mục của các layer 
+          + Biểu tượng con mắt 
+          + chọn layer:
+             + chuột phải 
+       + Character:
+       + Blending options 
+          + là bảng thuộc tính của layer 
+       + Smart object:
+          + là 1 đối tượng 
+#Lesson 16,17,18,19,20: Thực hành cắt giao diện Modest 
+   Reponsive: 
+     + Bản thiết kế:
+        + Desktop 
+        + Tablet 
+        + Mobile 
+   + Media query:
+   + Break point: điểm phá vỡ
+      > 1200
+      960=>1200
+      768=>960
+      <768 
+      <500
+
+#Lesson 21:
+   Bootstrap:
+     + là css framework 
+     + bộ khung css để làm css nhanh hơn 
+     + grid system: hệ thống lưới
+        + container=>row=>column 
+     + container:
+        + container 
+        + container-fluid 
+     col-*
+     row-cols-*: định nghĩa số cột
+     col-{size}-*
+  Bootstrap chia thành các màn hình:
+     + extra large: xl 
+     + large: lg 
+     + medium: md 
+     + small: sm 
+     + extra small: xs 
+#Lesson 22:
+    Sử dụng bootstrap 
+      + Css thuần
+      + Nên học grid system
+      + ko nên học các component=>custom 
+      + trục main: justify-content-between 
+      + trục cross: align-items-center
+   Bắt đầu loạt javascript cơ bản 
+      + javascript trên trình duyệt 
+         + js 
+         + es6 
+      + js chạy trên server 
+   + console.log(thong_tin)
+   + javascript: hoạt động ntn?
+      + js engine
+      + đối tượng window: 
+          + tất cả mọi code js đều nằm trong đối tượng window
+      + đối tượng document:
+          + nằm trong window 
+          + là đối tượng đại diện cho tài liệu html hiện tại 
+      + biến :
+          +  là 1 vùng bộ nhớ để lưu trữ dữ liệu,biến thì có tên
+          + cách khai báo biến:
+             + var [ten bien]=[gia tri cua bien]; 
+             + let [ten bien]=[gia tri cua bien]; (es6)
+          + các kiểu của biến: 
+             + chuỗi: String: là 1 tập hợp các kí tự 
+             + number: 
+             + array: mảng 
+                + là 1 biến có thể chứa nhiều giá trị
+                + mỗi giá trị => là phần tử (item)
+                + thông thường,code pro =>các phần tử có cùng kiểu dữ liệu 
+                + Mảng đặc biệt:
+                  + mảng không có phần tử 
+                  + mảng có các phần tử là mảng (1 mảng các mảng)
+                  + mảng 2 chiều: mảng của mảng 
+                  + mảng 3 chiều: mảng của mảng của mảng của mảng 
+             + object: đối tượng: là 1 thể hiện cái gì đó trong thực thế 
+                + Sử dụng cặp dấu { }
+                + thuộc tính (property)
+             + Undefined: là 1 cái biến chưa dc tạo ra, chưa khai báo, chưa dc gán giá trị 
+             + Kiểu null: đã khai báo=>chưa có giá trị 
+             + NaN: not a number:(xử lí tính toán)
+             + Boolean: là biến chỉ có 2 giá trị đại diện true/false 
+
+       + hằng số: 
+           + là 1 vùng bộ nhớ,có tên=>ko thể thay đổi trong suốt chương trình 
+       + cách chạy của js:
+           + chạy trên trình duyệt
+               +JS DOM
+           + chạy trên server:nodejs 
+               + package:epress   
+   + mỗi thẻ html = 1 biến ở dưới javascript 
+   + viết html => tạo ra các biến 
+   + viết css: thay đổi thuộc tính các biến
+#Lession 23:
+  ten nguoi: string 
+  dia chi: string 
+  dien thoai: string (09129392)
+  so cmnd: string 
+  ma so sinh vien: 
+  chieu cao: number
+  can nang: number 
+#Lesson 24:
+#Lession 25:
+ *các thao tác vs biến trong js:
+  + các thao tác xử lí chuỗi:
+      + lấy ra số kí tự: .length()
+      + nối chuỗi: toán tử: + 
+      + viết hoa: toUpperCase()
+      + viết thường: toLowerCase()
+      + cắt chuỗi cắt 1 doặn từ start đến end: 
+            + substring
+            + bắt đầu từ 0
+      + cắt chuỗi theo vị trí và chiều dài:
+            + substr(start,length)
+      + thay thế chuỗi: 
+            + replace(chuỗi cần thay,chuỗi thay);
+      + loại bỏ khoảng trắng: 
+            + trim()
+      + indexOf(): tìm vị trí đầu tiên 
+      + lastIndexOf(): tìm vị trí cuối cùng của cái gì đó 
+      + charAt: lấy ra kí tự thứ mấy
+      + hàm split: tách chuỗi theo kí tự 
+            + split(kí tự cắt)
+            trả về 1 mảng 
+   + các thao tác xử lí number:
+      + toán tử: 
+            + toán tử toán học:cộng trừ nhân chia 
+            + toán tử logic: and,or,not 
+            + toán tử bitwise 
+
+   + hàm: function:
+      + hàm là 1 đoạn code thực hiện 1 cái công việc nào đó 
+      + hàm có thể gọi nhiều lần 
+      + hàm cũng là biến 
+      + hàm có thể nhận các tham số, biến đầu vào, phải theo thứ tự 
+      + đầu ra: return 
+         + khi chương trình gặp return dừng chương trình
+      + hàm không tên (anonymous function) 
+      + hàm muỗi tên (arrow function)
+         + nếu chỉ có 1 tham số: ko cần dấu ngoặc tròn 
+         + ko hỗ trợ trình duyệt cũ
+      + tham số là hàm 
+   + thao tác với array:
+      + lấy ra 1 phần tử của array: array[vi trí pt]
+      + lấy ra số phần tử của array: array.length-1
+      + xóa phần tử cuối cùng: pop()
+          + trả về phần tử cuối cùng 
+      + xóa phần tử đầu mảng: shift()
+          + là hàm trả về phần tử đầu  
+      + xóa phần tử trong mảng: splice(bat dau, so luong)
+          + là hàm trả về 
+      + thêm phần tử vào cuối: push()
+          + trả về số lượng phần tử mảng 
+      + thêm phần tử vào đầu mảng: unshift
+      + join(): cộng các phần tử lại thành chuỗi  
+          + join(ki tự)
+      + sort(): sắp xếp tăng dần
+      + reverse(): đão ngược
+      + forEach(fn): lặp qua các phần tử của mảng 
+          + ko có trả về
+      + map(fn): sao chép 1 mảng sau khi chạy qua 1 hàm xử lí, có thay đổi
+          + có trả về 
+      + filter(fn): lọc 
+      + every(): kiểm tra và trả về true/false 
+          + true: tất cả đều true 
+          + false: khi 1 lần chạy trong các phần tử false 
+      + reduce(fn,start_value):
+   // có bao nhiêu số chẵn 
+   // có bao nhiêu người họ nguyễn
+BT:
+1. Cho 1 mảng các tên người, hãy xuất ra mỗi người vs lời chào
+2. Cho 1 mảng các số, xuất ra 1 mảng các số nhân đôi từ mảng cũ và sắp xếp tăng dần
+3. Cho 1 mảng tên người(họ tên đầy đủ)=>đếm xem có bao nhiêu người có chữ H trong tên
+4. Cho 1 mảng các số =>xuất ra mảng các số đã được thêm 2 và ko chia hết cho 3
+ VD: [1,4]=>[3,6]=>[]
+     [2,5]=>[4,7]=>[4,7]
+5. Cho 1 mảng có chiều cao cm
+   Điều kiện: 
+      cao<165:size s
+      cao 165=>170:size m 
+      cao>170 =>size L
+   Đếm xem có bao nhiêu người mặc áo size S
+   Đếm xem có bao nhiêu người mặc áo size M
+   Đếm xem có bao nhiêu người mặc áo size L
+[154,176,167]
+Số người mặc áo size s: 1
+....
+
+#Lesson 26:
+  + Loop và DOM 
+  + Loop:vòng lặp 
+    break and continue 
+    + continue: bỏ qua phần dưới vòng lặp 
+    + break: phá vỡ vòng lặp=>vòng lặp dừng lại 
+     + for: 
+         + điều kiện bắt đầu 
+         + điều kiện kết thúc 
+         + bước nhảy (step)
+     + while:lặp khi mà điều kiện vẫn đúng
+         + khi mà ko biết chính xác số lần lặp 
+         + lưu ý: phải có điều kiện để vòng lặp kết thúc 
+     + do while: giống như vòng lặp while=>thực hiện ít nhất 1 lần 
+ forEach()=> ko có break, continue
+ box model:
+   + js DOM:
+      + DOM: document object model 
+         + tất cả mọi thứ trong html,css=>đều là các object js
+   + các phương thức và thuộc tinh:
+      + Đối tượng document:
+         + phương thức(method,hàm,function)
+             + createElement(ten_tag)
+             + appendChild(): thêm 1 phần tử vào html
+             + getElementById: lấy 1 thẻ html có sẳn vào 1 biến 
+             + getElementsByClassName()
+             + getElementsByTagName()
+             + querySelector():dùng css để tìm, chỉ trả về 1
+             + querySelectorAll(): dùng css để tìm, trả về nhiều 
+         + thuộc tính: 
+             + innnerHTML: nội dung bên trong của 1 thẻ
+             + style: 
+   + event: 
+   + tất cả các element trên html đều có event 
+     + click: bấm chuột xuống =>thả chuột ra 
+     + mousedown: bấm chuột xuống 
+     + mouseup: thả chuột ra 
+     + mouseover: di chuyển từ bên ngoài chuột 
+     + mouseout: di chuyển từ bên trong ra 
+     + touchstart
+     + touchend
+   + document:
+     + DOMDocumentReady:html đã tải xong
+     + load: toàn bộ trang đã tải xong
+   + image:
+     + load: ảnh đã tải xong
+   + addEventlistener(ten_su_kien,fn_callback)
+Callback:
+   + Dòng thời gian 
+Preload: 
+   + Khi vào 1 trang web =>hiện loading 
+   + load xong => mất loading 
+#Lesson 27: Sửa bài tập 
+#Lesson 28: Lập trình hướng đối tượng 
+ Code xoay quanh các đối tượng:
+    + Đối tượng: object:là 1 đoạn code thể hiện bất kì 1 thực thể,vật thể,con vật nào trong cuộc
+    sống
+    + class: lớp: định nghĩa 
+        + bên trong có:
+           + hàm: function,method 
+           + biến: property: thuộc tính 
+           + constructor: hàm khởi tạo 
+              + là 1 hàm:luôn chạy trước tất cả các hàm khác
+              + các tham số của constructor: dc nhận từ khi khởi tạo 
+              + chạy các hàm khởi tạo 
+              + là nơi chứa property
+    + instance: thực thể: là 1 thể hiện của class 
+        + tạo instance bằng từ khóa new
+        + một cái class có thể tạo nhiều instance
+    + cách gọi hàm của đối tượng: dùng dấu chấm 
+    + cách lấy thuộc tính: dùng dấu chấm
+    
+    Tạo đối tượng:
+        + Bằng từ khóa new 
+        + cặp dấu {}
+        + function
+    + this: chính là object hiện tại 
+    + this chỉ dc viết trong hướng đối tượng 
+
+    Kế thừa:
+    + Class cha để class con 
+    + Class con kế thừa class cha 
+    + extends 
+    + class con sẽ có các thuộc tính và hàm của class cha 
+    + supper()=> gọi constructor của class cha 
+    Riêng trong js:
+    Prototype:(nguyên mẫu)
+      + là 1 thuộc tính 
+      + có tên là _proto_
+      + chứa các hàm có sẵn của js
+      + giấu các hàm có sẵn tránh thay đổi 
+      + các hàm có sẵn=>phụ thuộc vào kiểu của biến 
+#Lesson 29: Làm bài tập select box
+      + Tạo 1 class tab theo oop:
+      + Tạo 1 class model theo oop
+  Callback, Promise: 
+      + Xử lí bất đồng bộ: 
+      + Đồng bộ:
+         + Code chạy từ trên xuống
+      + Bất đồng bộ:
+         + Code chạy đến dòng 3=>chờ load ảnh xong 
+         + chạy dòng 4
+   Callback:  
+   Callback hell:
+   =>Promise:Lời hứa
+         + là 1 oject có sẵn js 
+         + chuyên xử lí bất đồng bộ
+         + có 2 tham số constructor:resolve và reject 
+         + then(function)
+   Promise.all():
+         + thành công khi toàn bộ Promise con thành công 
+         + ko đảm bảo thứ tự
+   Promise.any():
+         + nhận vào 1 mảng các Promise
+         + Thành công nếu 1 cái thành công 
+   async và await:
+         + async function => trả về promise
+#Lesson 30:
+ => Sửa bài tập 
+#Lesson 31: 
+   Nodejs => npm()
+   + viết code js,css 
+   + nhúng file js vào html 
+   + nhiều file js=>compile code js=>file bundle=>file đích
+   + bước vào hệ sinh thái js 
+   + có nhiều thư viện
+   + cài đặt,xóa,update các thư viện=>khó khăn 
+   Có những thư viện js có thể sử dụng trên server và client 
+   NPM: node package manager(trình quản lí gói nodejs)
+   + Phần mềm:
+     + viết bằng js
+     + dùng để quản lí các gói (package,thu viện) javascript
+   + sử dụng command line:
+     + công cụ dòng lệnh 
+     + cd: change directory:di chuyển đến thư mục
+     + ls:hiển thị danh sách file
+   Cài nodejs: =>npm 
+   Cài npm
+   Sử dụng npm:
+     + xem phiên bản: npm -v 
+     + khởi tạo dự án: tạo project: npm init
+     + cài đặt 1 gói: npm install ten_goi
+        + --save: lưu vào dependencies
+        + -- save-dev: lưu vào dev dependencies
+        + cài đặt local: chỉ sử dụng bên trong thư mục dự án
+        + cài đặt global: sử dụng mọi nơi trong máy 
+
+     + xóa 1 gói:
+        + npm remove [ten_goi]
+     + Run 1 script: 
+        + npm run [ten script]
+     + npm install: đọc danh sách các gói và cài đặt 
+     + json:
+        + là một định dạng file 
+   + package.json: là file cấu hình của dự án js
+     + dependencies:
+        + là danh sách các gói mà dc sử dụng trong môi trường production
+     + devDependencies:
+        + là danh sách các gói mà dc sử dụng trên môi trường dev 
+   + kho chứa npm:
+     + packagist
+   + package-lock.json:là file cấu hình của dự án js 
+     + lock version 
+   + node_modules: 
+     + là thư mục chứa toàn bộ các thư viện
+     + xóa đi  
+   + các lệnh dc tạo sẵn
+   + sử dụng các gói như thế nào
+   + build các file js như thế nào 
+   + viết code js theo module 
+   + webpack: là 1 gói package 
+
+2 người code chung:
+   + người 1 muốn dùng jquery 
+   + người 2: npm install => ko cần phải cài đặt jquery,ko cần tải jquery
+
+Bài tập:
+  + cài đặt , cấu hình 1 project npm 
+  + cài đặt webpack 
+  + cấu hình webpack build ra file/js/bundle.js 
+  + cấu hình watch 
+#Lesson 32: 
+ Vue js:
+  + framework javascript
+ Học js framework:
+  + tìm hiểu khái niệm của fw đó 
+  + bị nhiều khái niệm đến cùng 1 lúc 
+  + học cách cài đặt
+
+ Vue: 
+  + 2 cách cài đặt:
+    + dùng 1 file js 
+    + dùng cli 
+ + Đối tượng chính: rất to: đối tượng vue 
+ + đối tượng vue(options)
+    + el:element:trong 1 ứng dụng vue=>có 1 element góc
+    =>root element
+ + xuất dữ liệu lên html: {{ }}
+   //div.innerHTML='abc';
+ + data: 
+    + là các thuộc tính  (property) đối tượng vue
+    + data=>hiển thị lên html bằng {{ }}
+ + model:
+    + mẫu: là 1 cách thức liên kết giữa element html và js
+ + v-show:
+    + element sẽ hiển thị khi giá trị true
+ + 2 ways binding: 
+    + khi ở trên html thay đổi=>dưới js thay đổi 
+    + khi ở dưới js thay đổi=>trên html thay đổi 
+ Vue-cli 
+   Cài đặt: 
+    + Tạo project:vue create [ten project]
+    + bable: công cụ build js =>giống webpack 
+    + eslint: là 1 công cụ sửa lỗi js
+    + serve: tạo ra server + watch=>chạy project
+ + File.vue
+    + 3 phần: 
+        + thành phần hiển thị :html 
+        + thành phần xử lí:js
+        + thành phần css
+    + khi file.vue=>build ra=>tự động nhặt js riêng,css riêng,html riêng
+    + Trong file vue:
+        + data must be a function
+ + Binding:
+    + là việc thay đổi html dựa theo data
+    + đẩy sự thay đổi từ dữ liệu lên thành phần hiển thị
+    + v-bind:
+        + tất cả thuộc tính html đều có thể binding
+        + v-bind:[ten thuoc tinh]=
+        + :[ten thuoc tinh]
+        + giá trị của v-bind:
+            + nếu là 1 tên biến:=>giá trị:giá trị của data
+            + object: object điều kiện
+    + v-model:
+        + là cách để liên kết giữa 1 form element vs 1 data bên dưới
+        + kiểu dữ liệu của data => tùy thuộc vào loại element
+ + Event: 
+    + v-on:[ten event]
+    + @[ten event]
+ v-show: chỉ định 1 element hiển thị hay không dựa theo data(boolean)
+    + chỉ ẩn bằng display:none
+ v-if:chỉ định 1 element hiển thị hay ko dựa theo data(boolean)
+    + xóa lun phần tử element
+ 
+ Vòng lặp:
+    + vòng lặp for:
+    + Muốn hiển thị nhiều phần tử
+    + v-for
+    + key: v-bind:key
+
+#Lesson 33,35,36,37,38:
+ =>Thực hành thử vuejs
+ Bài tập:
+   + tạo 1 trang làm bài trắc nghiệm
+   + dữ liệu dc viết trước trong data
+#Lesson 35:
+   + component:
+      + là 1 tập hợp các thẻ html
+      + có 3 thành phần
+         + thành phần hiển thị
+         + thành phần xủ lí
+         + thành phần style:
+            + css
+            + scss
+            + scoped style
+      + các component cách biệt nhau
+      + cách tạo component:
+      + vòng đời của component
+   + lifecycle:
+   + methods:
+      + hàm: viết như function js thuần
+   + watch:
+      + khi data thay đổi thì sẽ làm gì?
+      + 2 tham số:newValue,oldValue
+      + khi watch object hoặc array:
+        + deep: true => watch cả items con
+    Props: 
+      + là giá trị lấy từ bên ngoài vào
+      + prop: chỉ có thể thay đổi bên trong
+      + giống hệt như data
+      + prop: chỉ có thể truyền 1 chiều: nếu là string,number
+      + prop: có thể truyền vào 2 chiều: array,object
+      + cách khai báo prop:
+        + dùng 1 mảng các các tên prop
+        + dùng object
+    Filter: 
+      + hiển thị trung gian giữa html và js: format dữ liệu giao diện
+      + ko làm cho dữ liệu thay đổi, cách hiển thị
+      + tham số của filter
+        + tham số đầu tiên là model
+      + sử dụng nhiều filter: nhiều dấu |
+    Vue router 
+      + sing page app: SPA => google
+    vue-router:
+      + hash: địa chỉ url sẽ phân tích bằng dấu #
+      + hash: sử dụng history api
+    + router-view: 
+    + router-link:
+    + event:
+      + native event: có sẵn trình duyệt
+      + custom event:
+         + truyền dữ liệu các component:
+           + props: 
+         + sử dụng một cái object vue làm event bus
+           + tạo ra 1 object vue trống
+           + sử dụng hàm $emit => fire một event
+      + Vue router 
+    + VueX => quản lí state
+    
+  Css: transition
+    + css3
+    + là sự chuyển tiếp giữa 2 trạng thái css => nhẹ nhàng
+    + khi không có sự thay đổi trạng thái(kích thước,màu sắc)=>transition không có tác dụng
+    + transition:(thuộc tính)[thời gian][timing function]
+    + transition: có ảnh hưởng đến những thuộc tính bằng số
+       1px 2px
+       width:200px
+       height
+       margin
+       padding
+       border
+       color,background-color:trong máy tính => là các con số
+       #fffff => 16 triệu màu
+
+Vue transition:
+    + the transition
+
+Tìm hiểu về reactjs:
+    + Sự tương đồng giữa các framework js
+    + 
++ NPM: node pakage manager=> trình quản lí gói
++ NPX: node pakage executor
+
+=>Bài tập 1:
+  + sử dụng kiến thức vuejs
+  + tạo toDoList app
+  Bài tập 2:
+
+
+#Lesson 40: Jquery
+  Jquery:
+     + vẫn phải biết
+     + có những dự án: bảo trì
+  + cài đặt jquery:
+     + nhúng file js
+     + npm
+  + selector:
+     + bộ chọn:giống selector css
+  + event:
+     + load: ready()
+     + click: click()
+  + slide:
+     + slideUp(): ẩn lên: -tốc độ - callback
+     + slideDown(): hiện xuống: -tốc độ - callback
+  + addClass:
+     + thêm 1 class css vào
+  + removeClass:
+     + xóa 1 class
+  + toggleClass:
+     + bật/tắt 1 class
+  + remove:
+     + xóa lun 1 element
+  + append(): thêm 1 thằng con
+  + appendTo(): thêm 1 thằng con vào 1 thằng cha
+  + object:
+     + chọn: 1 cai,nhiều cái
+  + this: trong jquery
+     + cái hiện tại:
+     + $(this)
+  + html() => vừa là getter vừa là setter  
+  + travel over html dom document
+     + next() => chuyển sang phần tử tiếp theo
+     + prev() => chuyển sang phần tử phía trước
+  + Bắt sự kiện của element chưa dc tạo ra
+  + on([tensukien],'element',callback)
+  $ là jquery object
+
+  *Tải về:
+     + async: bất đồng bộ=>cứ tải=>xong lúc nào thì chạy lúc đó
+     + defer: đồng bộ=>dừng lại để tải xong
+=> áp dụng làm accordion menu
+#Lesson 41:
+ - git (git flow - các công ty thực tế người ta làm)
+ - docker
+ Git:
+   + là phần mềm quản lí phiên bản(version control)
+   + là 1 công cụ cho các lập trình viên làm việc với nhau
+   + có 2 phần:
+     + git server: máy chủ git => kho chứa code
+        + github
+        + gitlab
+        + gitbucket
+     + git client: là phần mềm chạy trên máy tính của chúng ta => tương tác với git server
+        + tải về
+        + restart lại máy
+ Github:
+  + Reponsitory:
+    + là 1 kho chứa code => mỗi dự án => trên một repo
+    + Fork: copy repo thành của mình
+  + Các thao tác trên git:
+    + clone: lấy project từ git server về + tải code trên server về
+       + git clone [địa chỉ github]
+    + thư mục .git => là 1 thư mục đặc biệt => cấu hình
+       + thấy thư mục này => git project
+    + pull: tải code trên server về => những lần sau chỉ cần pull
+    + git status: xem sự thay đổi của file
+    + push:
+       + đẩy code lên server
+       + 2 bước:
+          + bước 1: đẩy lên local repo
+             + git add => thêm file vào danh sách tracked files
+             + git commit => đẩy lên local repo
+                -m: message
+          + bước 2:
+             + git push => đẩy code lên server
+ + ssh:
+   + là 1 phương thức kết nối
+   + ssh key:
+      + khóa kết nối giữa máy tính và git
+      + có 2 file:
+         + secret key: khóa bí mật => nằm trên máy
+         + public key: khóa công khai => nằm trên git
+ Branch: nhánh
+   + Master: nhánh gốc
+   + checkout: nhảy đến 1 cái nhánh nhất định
+   + git branch --set-upstream-to origin/BRANCH
+   + set-upstream:
+     + đang có 1 nhánh trên local repo
+     + nhánh này khi push lên github => thành tên 1 nhánh nào đó 
+ Git flow:
+   + là cách mà các lập trình viên làm việc với nhau
+   + đây là cách làm việc ở các công ty
+ + Master:
+ + dev (development)=> chứa code cả team
+ + các nhánh feature (feature/login)
+ Là 1 lập trình viên chân chính:
+ + Để làm 1 tính năng:
+   + em làm cho anh tính năng đăng kí
+   + git checkout -b feature/register origin/dev => copy code của team về
+   + viết code
+   + push lên
+   + tạo merge request (pull request): thao tác trộn code
+ Fix bug tính năng đăng kí
+ 
+ Leader chân chính:
+   + kiểm tra các pull request
+
+#Lesson 54: Laravel Framework
+ MVC : 
+   + code mvc bằng php thuần
+ MVC: là một mô hình viết code
+ + ko phải chỉ có php là có mvc
+
+ Cấu tạo của mvc:
+   + model:các class
+   + view: thành phần hiển thị: code html
+   + controller: 
+     + là sân chơi cho các model tương tác vs nhau
+     + tạo các thực thể của model
+ Framework Laravel:
+ + Laravel
+ + Lumen: phiên bản rút gọn => hổ trợ micro service
+ + Cách cài đặt:
+   + cài bằng composer
+ + Cấu trúc thư mục:
+   + composer.json
+   + package.json
+   + .env => file môi trường, cấu hình
+   + vendor => thư mục chứa các thư viện
+   + bootstrap và storage: thư mục cache => lưu tạm
+   + public: là thư mục được truy cập trên web
+      + js
+      + css
+      + images
+   + config: 
+      + thư mục chứa các file cấu hình
+   + resource:
+      + js
+      + lang
+      + sass: scss => css
+      + views: thành phần hiển thị
+   + routes: 
+      + nhận request => trỏ đến controller xử lí
+   + app:
+      + Hầu hết code sẽ nằm ở đây
+      + Http: 
+         + controllers: thư mục chứa các controller
+         + kernel.php
+   + database:
+      + migration: thao tác với db
+      + seeds: chứa các seeder => tạo ra dữ liệu mẫu
++ Artisan: 
+   + là 1 công cụ của laravel => viết bằng php
+   + php artisan serve: chạy server
+   + php artisan make:controller [ten controller]
+   + php artisan make:model [ten model]
+   + php artisan down => đưa web về trạng thái bảo trì
+   + php artisan up => hoạt động lại bình thường
+   + php artisan config:clear => xóa hết cache của config
+   + php artisan config:cache => xóa vào tạo lại cache
+      + cứ khi nào sửa config, hoặc .env => phải chạy lại
+   + php artisan key:generate => tạo key => khóa
+      + Mỗi ứng dụng sẽ có cái khóa
+   + php artisan cache:clear => xóa hết cache của toàn bộ
+
+#Lesson 56
+ - Route:
+    + GET
+    + POST
+    + route params: tham số
+    + đặt tên cho route
+    + route group:
+      + nhóm route: tập hợp các route có cùng thuộc tính
+ - Request:
+    + là 1 object => chứa toàn bộ các thông tin của client gửi lên
+Lesson 57:
+ - View và blade template: file .blade.php => qui tắc đặt tên
+ - view: làm nhiệm vụ hiển thị thông tin
+ - Chỉ chứa code html
+ - blade view => dịch sang php => cache lại
+ - Load 1 view
+    + load view trong thư mục: dùng dấu chấm
+    + pass params sang view: truyền biến sang view
+    + template engine:
+       + Viết code php theo qui tắc riêng
+       + template engine => dịch => php
+ - xuất 1 biến: {{ }}
+ - vuejs thêm dấu: @{{ }}
+ - if
+ - elseif
+ - foreach
+ - forelse:
+   + foreach nếu mảng có pt
+   + nếu ko có phần tử nào => else
+ - extends một view:
+   + Kế thừa
+   + yield => 
+   + section => giống như component trong vue js
+ - @include()
+ - Model: các object
+ - Migration:
+   + tạo database bằng tay
+   + chạy migration: php artisan migrate
+ + Tạo model: php artisan make:model -m
+ + ORM: mô hình ORM
+    + object relationship maping
+    + là mô hình liên kết giữa model và database
+

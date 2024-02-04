@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .selectbox {
+        display: inline-block;
+        border: 1px solid #ebebeb;
+        padding: 10px;
+        position: relative;
+    }
+    .selectbox > div{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: 1px solid black;
+        width: 100%;
+        display: none;
+    }
+    .selectbox.open >div{
+        display: block;
+    }
+    .selectbox > span{
+        cursor: pointer;
+    }
+    .selectbox > div >div{
+        border-bottom: 1px solid black;
+        cursor: pointer;
+    }
+    .selectbox > div >div:hover{
+        background-color: rgb(190, 186, 183);
+        
+    }
+</style>
+
+<body>
+    Hãy chọn thành phố:
+    <div class="selectbox" id="city">
+        <span>Vui lòng chọn</span>
+        <div>
+            <div>Hà Nội</div>
+            <div>Hồ Chí Minh</div>
+            <div>Hải Phòng</div>
+        </div>
+    </div>
+</body>
+<script src="function.js"></script>
+</html>
